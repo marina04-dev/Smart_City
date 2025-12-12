@@ -181,3 +181,41 @@ footer a:hover {
     gap: 2.5rem;
     margin-top: 2rem;
 }
+
+
+/* --- DROPDOWN MENU STYLES --- */
+nav ul li {
+    position: relative; /* Κρατάει το υπομενού "δεμένο" στο κουμπί */
+}
+
+nav ul li ul {
+    display: none;       
+    position: absolute;  
+    top: 100%;           
+    left: 50%;           
+    transform: translateX(-50%); 
+    background-color: var(--secondary-color); 
+    padding: 1rem;
+    border-radius: 8px;
+    width: 220px;        
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    z-index: 1000;       
+    flex-direction: column; 
+    gap: 0.5rem;         
+}
+
+nav ul li:hover > ul {
+    display: flex;       
+}
+
+nav ul li ul li a {
+    font-size: 0.95rem;  
+    display: block;      
+    padding: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+}
+
+nav ul li ul li a:hover {
+    color: var(--primary-color);
+    background-color: rgba(255,255,255,0.05); 
+}
