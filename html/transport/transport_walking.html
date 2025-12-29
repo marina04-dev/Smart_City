@@ -87,6 +87,38 @@
       <p>Just 30 minutes of walking daily reduces heart disease risk by 19%. It also boosts mental health and clears the mind.</p>
     </main>
 
+    <section id="calculator" style="background: #e8f8f5; padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #2ecc71;">
+        <h3>🌱 Commute Impact Calculator</h3>
+        <p>Calculate how much CO2 you save by walking instead of driving.</p>
+        
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <input type="number" id="kmInput" placeholder="Distance (km)" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex: 1;">
+            <button onclick="calculateSavings()" class="cta-button" style="margin-top: 0; cursor: pointer;">Calculate Savings</button>
+        </div>
+        
+        <p id="calcResult" style="margin-top: 1rem; font-weight: bold; color: var(--secondary-color); font-size: 1.2rem;"></p>
+    </section>
+
+    <script>
+        function calculateSavings() {
+            // 1. Get the input value
+            var km = document.getElementById('kmInput').value;
+            var resultText = document.getElementById('calcResult');
+
+            // 2. Validate input
+            if (km === "" || km <= 0) {
+                resultText.innerHTML = "<span style='color: red;'>Please enter a valid distance!</span>";
+                return;
+            }
+
+            // 3. Calculation: Avg car emits ~120g CO2 per km
+            var co2Saved = (km * 0.12).toFixed(2); 
+
+            // 4. Display Result
+            resultText.innerHTML = "🚶 By walking " + km + "km, you prevent <strong>" + co2Saved + " kg</strong> of CO2 from entering the atmosphere!";
+        }
+    </script>
+
     <footer>
             <p>&copy; 2025 The EcoCoders Team.</p>
             <p>
