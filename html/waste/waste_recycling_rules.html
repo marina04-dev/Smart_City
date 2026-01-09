@@ -83,12 +83,46 @@
           <img src="../../images/waste_recycling.jpg" alt="Plastic recycling symbol on bottle" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem;">Always check the number inside the triangle before tossing.</figcaption>
       </figure>
+
+      <section id="waste-tool" style="background: #eafaf1; padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #2ecc71;">
+          <h3>♻️ Can I Recycle This?</h3>
+          <p>Enter the plastic code number (found in the triangle) to check.</p>
+          
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <input type="number" id="plasticCode" placeholder="Code (1-7)" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex: 1;">
+              <button onclick="checkRecycling()" class="cta-button" style="margin-top: 0; cursor: pointer;">Check</button>
+          </div>
+          
+          <p id="result" style="margin-top: 1rem; font-weight: bold; font-size: 1.2rem;"></p>
+      </section>
+
       <h3>Know Your Codes</h3>
       <ul>
         <li><strong>#1 (PET) & #2 (HDPE):</strong> Bottles and jugs. Highly recyclable.</li>
         <li><strong>#6 (PS):</strong> Styrofoam. Generally NOT recyclable in curbside bins.</li>
       </ul>
     </main>
+
+    <script>
+        function checkRecycling() {
+            var code = document.getElementById("plasticCode").value;
+            var result = document.getElementById("result");
+
+            if (code === "1" || code === "2") {
+                result.textContent = "✅ Recyclable! Rinse and bin.";
+                result.style.color = "#27ae60";
+            } else if (code === "6") {
+                result.textContent = "❌ Not Recyclable (Styrofoam).";
+                result.style.color = "#c0392b";
+            } else if (code === "3" || code === "4" || code === "5" || code === "7") {
+                result.textContent = "❌ Usually Not Recyclable in curbside bins.";
+                result.style.color = "#d35400";
+            } else {
+                result.textContent = "⚠️ Please enter a valid plastic code (1–7).";
+                result.style.color = "#333";
+            }
+        }
+    </script>
 
     <footer>
             <p>&copy; 2025 The EcoCoders Team.</p>
