@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../css/style.css" />
 
     <style>
+      /* Internal CSS specific to this page. 
+      I used a 'bio-container' class to center the content and add a shadow effect. */
       .bio-container {
         max-width: 800px;
         margin: 0 auto;
@@ -36,7 +38,7 @@
       </nav>
     </header>
 
-    <!-- Main section of the page -->
+    <!-- Main Container -->
     <main class="bio-container">
       <div class="profile-header">
         <h1>Marina Chatziefraimidou</h1>
@@ -46,6 +48,7 @@
 
       <hr />
 
+      <!-- About Section -->
       <section id="about-me">
         <h2>About Me</h2>
         <p>
@@ -58,6 +61,7 @@
         <p><strong>Date of Birth:</strong> 26/03/2004</p>
       </section>
 
+      <!-- CS Interests Section -->
       <section id="cs-interests">
         <h2>Interests in Computer Science</h2>
         <ul>
@@ -69,6 +73,7 @@
         </ul>
       </section>
 
+      <!-- Hobbies Section -->
       <section id="hobbies">
         <h2>Hobbies</h2>
         <p>
@@ -78,21 +83,24 @@
       </section>
     </main>
 
-    <!-- Footer section -->
+    <!-- Footer Section -->
     <footer>
       <p>&copy; 2025 Marina Chatziefraimidou</p>
       <p><a href="../../index.html">Return to SmartCity Home</a></p>
     </footer>
 
+    <!-- Scroll Top Button -->
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
       ⬆️
     </button>
 
+    <!-- Scroll Top Button Functionality Script -->
     <script>
       var mybutton = document.getElementById("scrollTopBtn");
       window.onscroll = function () {
         scrollFunction();
       };
+
       function scrollFunction() {
         if (
           document.body.scrollTop > 20 ||
@@ -103,6 +111,7 @@
           mybutton.style.display = "none";
         }
       }
+      
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
