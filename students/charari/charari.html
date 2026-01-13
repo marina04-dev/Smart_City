@@ -85,10 +85,15 @@
     </button>
 
     <script>
+      // Get the button element
       var mybutton = document.getElementById("scrollTopBtn");
+
+      // When the user scrolls down 20px from the top, the button appears
       window.onscroll = function () {
         scrollFunction();
       };
+
+      // JavaScript function to handle the scroll-to-top behavior
       function scrollFunction() {
         if (
           document.body.scrollTop > 20 ||
@@ -99,6 +104,8 @@
           mybutton.style.display = "none";
         }
       }
+
+      // Scroll to the top of the document when clicked
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
