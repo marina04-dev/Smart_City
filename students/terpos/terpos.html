@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimitrios Terpos - Personal Page</title>
-    
+
     <link rel="stylesheet" href="../../css/style.css">
 
     <style>
         /* CLASS SELECTOR: Styles the main container with a white background and shadow */
+        
         .bio-container {
             max-width: 800px;
-            margin: 0 auto; /* Centers the box horizontally */
+            margin: 0 auto;
+            /* Centers the box horizontally */
             background-color: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        
         .profile-header {
             text-align: center;
             margin-bottom: 2rem;
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -37,7 +41,7 @@
     </header>
 
     <main class="bio-container">
-        
+
         <div class="profile-header">
             <h1>Dimitrios Terpos</h1>
             <p><strong>Student ID:</strong> CSY25108</p>
@@ -78,7 +82,9 @@
         var mybutton = document.getElementById("scrollTopBtn");
 
         // Window.onscroll checks every time the user scrolls
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             // IF statement to check if user has scrolled down 20px
@@ -96,4 +102,5 @@
         }
     </script>
 </body>
+
 </html>

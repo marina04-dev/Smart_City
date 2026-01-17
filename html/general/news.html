@@ -1,209 +1,189 @@
-<!-- chatziefraimidou -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmartCity - Sustainable Living Guide</title>
+    <title>Latest News - SmartCity</title>
     <link rel="stylesheet" href="../../css/style.css" />
-  </head>
-  <body>
+    <style>
+        /* Internal CSS for News Cards */
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #2ecc71;
+            /* Green accent */
+            transition: transform 0.2s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .news-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .news-card h3 {
+            margin-top: 0;
+            /* Override global margin for cards */
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
     <header>
-      <div class="logo">
-        <h1>SmartCity</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-
-          <li>
-            <a href="../energy/energy_solar.html">Energy ▾</a>
+        <div class="logo">
+            <h1>SmartCity Updates</h1>
+        </div>
+        <nav>
             <ul>
-              <li><a href="../energy/energy_solar.html">Solar Power</a></li>
-              <li><a href="../energy/energy_insulation.html">Insulation</a></li>
-              <li><a href="../energy/energy_lighting.html">Lighting</a></li>
-              <li><a href="../energy/energy_monitor.html">Monitoring</a></li>
-              <li><a href="../energy/energy_tips.html">Daily Tips</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../energy/energy_solar.html">Energy ▾</a>
+                    <ul>
+                        <li><a href="../energy/energy_solar.html">Solar Power</a></li>
+                        <li><a href="../energy/energy_insulation.html">Insulation</a></li>
+                        <li><a href="../energy/energy_lighting.html">Lighting</a></li>
+                        <li><a href="../energy/energy_monitor.html">Monitoring</a></li>
+                        <li><a href="../energy/energy_tips.html">Daily Tips</a></li>
+                    </ul>
+                </li>
+                <li><a href="../waste/waste_recycling_rules.html">Waste ▾</a>
+                    <ul>
+                        <li><a href="../waste/waste_recycling_rules.html">Recycling Rules</a></li>
+                        <li><a href="../waste/waste_compost.html">Composting</a></li>
+                        <li><a href="../waste/waste_upcycling.html">Upcycling</a></li>
+                        <li><a href="../waste/waste_plastic_alts.html">Plastic Alts</a></li>
+                        <li><a href="../waste/waste_hazards.html">Hazards</a></li>
+                    </ul>
+                </li>
+                <li><a href="../water/water_harvesting.html">Water ▾</a>
+                    <ul>
+                        <li><a href="../water/water_harvesting.html">Harvesting</a></li>
+                        <li><a href="../water/water_fixtures.html">Fixtures</a></li>
+                        <li><a href="../water/water_garden.html">Garden</a></li>
+                        <li><a href="../water/water_filtration.html">Filtration</a></li>
+                        <li><a href="../water/water_drought.html">Drought Info</a></li>
+                    </ul>
+                </li>
+                <li><a href="../transport/transport_ev_guide.html">Transport ▾</a>
+                    <ul>
+                        <li><a href="../transport/transport_ev_guide.html">EV Guide</a></li>
+                        <li><a href="../transport/transport_biking.html">Biking</a></li>
+                        <li><a href="../transport/transport_public.html">Public Transit</a></li>
+                        <li><a href="../transport/transport_carpool.html">Carpooling</a></li>
+                        <li><a href="../transport/transport_walking.html">Walking</a></li>
+                    </ul>
+                </li>
+                <li><a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a>
+                    <ul>
+                        <li><a href="../lifestyle/life_ethical_shopping.html">Ethical Shop</a></li>
+                        <li><a href="../lifestyle/life_fast_fashion.html">Fast Fashion</a></li>
+                        <li><a href="../lifestyle/life_urban_farming.html">Urban Farm</a></li>
+                        <li><a href="../lifestyle/life_seasonal_eating.html">Seasonal Eat</a></li>
+                        <li><a href="../lifestyle/life_meat_impact.html">Meat Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="../general/news.html">News</a></li>
+                <li><a href="../general/about_sustainability.html">About Sustainability</a></li>
             </ul>
-          </li>
-
-          <li>
-            <a href="../waste/waste_recycling_rules.html">Waste ▾</a>
-            <ul>
-              <li>
-                <a href="../waste/waste_recycling_rules.html"
-                  >Recycling Rules</a
-                >
-              </li>
-              <li><a href="../waste/waste_compost.html">Composting</a></li>
-              <li><a href="../waste/waste_upcycling.html">Upcycling</a></li>
-              <li>
-                <a href="../waste/waste_plastic_alts.html">Plastic Alts</a>
-              </li>
-              <li><a href="../waste/waste_hazards.html">Hazards</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="../water/water_harvesting.html">Water ▾</a>
-            <ul>
-              <li><a href="../water/water_harvesting.html">Harvesting</a></li>
-              <li><a href="../water/water_fixtures.html">Fixtures</a></li>
-              <li><a href="../water/water_garden.html">Garden</a></li>
-              <li><a href="../water/water_filtration.html">Filtration</a></li>
-              <li><a href="../water/water_drought.html">Drought Info</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="../transport/transport_ev_guide.html">Transport ▾</a>
-            <ul>
-              <li>
-                <a href="../transport/transport_ev_guide.html">EV Guide</a>
-              </li>
-              <li><a href="../transport/transport_biking.html">Biking</a></li>
-              <li>
-                <a href="../transport/transport_public.html">Public Transit</a>
-              </li>
-              <li>
-                <a href="../transport/transport_carpool.html">Carpooling</a>
-              </li>
-              <li><a href="../transport/transport_walking.html">Walking</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a>
-            <ul>
-              <li>
-                <a href="../lifestyle/life_ethical_shopping.html"
-                  >Ethical Shop</a
-                >
-              </li>
-              <li>
-                <a href="../lifestyle/life_fast_fashion.html">Fast Fashion</a>
-              </li>
-              <li>
-                <a href="../lifestyle/life_urban_farming.html">Urban Farm</a>
-              </li>
-              <li>
-                <a href="../lifestyle/life_seasonal_eating.html"
-                  >Seasonal Eat</a
-                >
-              </li>
-              <li>
-                <a href="../lifestyle/life_meat_impact.html">Meat Impact</a>
-              </li>
-            </ul>
-          </li>
-
-          <li><a href="../general/news.html">News</a></li>
-          <li>
-            <a href="../general/about_sustainability.html"
-              >About Sustainability</a
-            >
-          </li>
-        </ul>
-      </nav>
+        </nav>
     </header>
-    <h1>Sustainability News & Updates</h1>
 
-    <div class="article">
-      <h4 class="article-title">Global Shift to Renewables.</h4>
-      <article class="article-preview">
-        Recent reports indicate that solar and wind energy are now cheaper than
-        coal in most major economies. Cities are adopting "Smart Grids" to
-        manage this power more efficiently.
-      </article>
-    </div>
+    <main>
+        <h2>Latest Developments in Sustainability</h2>
+        <p>Stay informed about the global shift towards a greener future.</p>
 
-    <div class="article">
-      <h4 class="article-title">The Rise of the Circular Economy.</h4>
-      <article class="article-preview">
-        Major brands are moving away from "take-make-waste" models. New
-        legislation pushes for "Right to Repair," ensuring electronics last
-        longer and stay out of landfills.
-      </article>
-    </div>
+        <div class="news-grid">
+            <article class="news-card">
+                <span class="news-date">January 15, 2026</span>
+                <h3>Global Shift to Renewables</h3>
+                <p>Recent reports indicate that solar and wind energy are now cheaper than coal in most major economies. Cities are adopting "Smart Grids" to manage this power more efficiently, marking a turning point in the energy crisis.</p>
+            </article>
 
-    <figure style="margin: 2rem 0; text-align: center">
-      <img
-        src="../../images/news_renewables.jpg"
-        alt="Solar panels and wind turbines in a field"
-        style="
-          width: 100%;
-          max-width: 800px;
-          border-radius: 12px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        "
-      />
-      <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
-        The future of energy is clean and renewable.
-      </figcaption>
-    </figure>
+            <article class="news-card">
+                <span class="news-date">January 10, 2026</span>
+                <h3>The Rise of the Circular Economy</h3>
+                <p>Major brands are moving away from "take-make-waste" models. New legislation pushes for "Right to Repair," ensuring electronics last longer and stay out of landfills, significantly reducing e-waste.</p>
+            </article>
+
+            <article class="news-card">
+                <span class="news-date">January 02, 2026</span>
+                <h3>Urban Greening Projects</h3>
+                <p>Metropolitan areas are investing heavily in "Vertical Forests" and rooftop gardens. These green spaces not only reduce the urban heat island effect but also improve mental health for residents.</p>
+            </article>
+        </div>
+
+        <figure style="margin: 3rem 0; text-align: center">
+            <img src="../../images/news_renewables.jpg" alt="Wind turbines in a green field" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+            <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
+                Clean energy is reshaping our world.
+            </figcaption>
+        </figure>
+    </main>
 
     <footer>
-      <p>&copy; 2026 The EcoCoders Team.</p>
-      <p>
-        <a href="../../students/chatziefraimidou/chatziefraimidou.html"
-          >Marina Chatziefraimidou Personal Page</a
-        >
-        |
-        <a href="#">Site Map</a>
-      </p>
-      <p>
-        <a href="../../students/varzakakou/varzakakou.html"
-          >Mary Varzakakou Personal Page</a
-        >
-        |
-        <a href="#">Site Map</a>
-      </p>
-      <p>
-        <a href="../../students/chatzimichail/chatzimichail.html"
-          >Konstantinos Chatzimichail Personal Page</a
-        >
-        |
-        <a href="#">Site Map</a>
-      </p>
-      <p>
-        <a href="../../students/terpos/terpos.html"
-          >Dimitris Terpos Personal Page</a
-        >
-        |
-        <a href="#">Site Map</a>
-      </p>
-      <p>
-        <a href="../../students/charari/charari.html"
-          >Georgia Charari Personal Page</a
-        >
-        |
-        <a href="#">Site Map</a>
-      </p>
+        <p>&copy; 2026 The EcoCoders Team.</p>
+        <p>
+            <a href="../../students/chatziefraimidou/chatziefraimidou.html">Marina Chatziefraimidou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/varzakakou/varzakakou.html">Mary Varzakakou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/chatzimichail/chatzimichail.html">Konstantinos Chatzimichail Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/terpos/terpos.html">Dimitris Terpos Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/charari/charari.html">Georgia Charari Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
     </footer>
 
-    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
-      ⬆️
-    </button>
-
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆️</button>
+    <script src="../../js/main.js"></script>
     <script>
-      var mybutton = document.getElementById("scrollTopBtn");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
+        var mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
-  </body>
+</body>
+
 </html>

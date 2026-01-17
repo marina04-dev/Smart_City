@@ -1,155 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Low-Flow Fixtures - SmartCity</title>
     <link rel="stylesheet" href="../../css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="logo">
-        <h1>Upgrade Fixtures, Save Water</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../energy/energy_solar.html">Energy ▾</a></li>
-          <li><a href="../waste/waste_recycling_rules.html">Waste ▾</a></li>
-          <li><a href="../water/water_harvesting.html">Water ▾</a>
+        <div class="logo">
+            <h1>Upgrade Fixtures, Save Water</h1>
+        </div>
+        <nav>
             <ul>
-              <li><a href="../water/water_harvesting.html">Harvesting</a></li>
-              <li><a href="../water/water_fixtures.html">Fixtures</a></li>
-              <li><a href="../water/water_garden.html">Garden</a></li>
-              <li><a href="../water/water_filtration.html">Filtration</a></li>
-              <li><a href="../water/water_drought.html">Drought Info</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../energy/energy_solar.html">Energy ▾</a></li>
+                <li><a href="../waste/waste_recycling_rules.html">Waste ▾</a></li>
+                <li><a href="../water/water_harvesting.html">Water ▾</a>
+                    <ul>
+                        <li><a href="../water/water_harvesting.html">Harvesting</a></li>
+                        <li><a href="../water/water_fixtures.html">Fixtures</a></li>
+                        <li><a href="../water/water_garden.html">Garden</a></li>
+                        <li><a href="../water/water_filtration.html">Filtration</a></li>
+                        <li><a href="../water/water_drought.html">Drought Info</a></li>
+                    </ul>
+                </li>
+                <li><a href="../transport/transport_ev_guide.html">Transport ▾</a></li>
+                <li><a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a></li>
+                <li><a href="../general/news.html">News</a></li>
+                <li><a href="../general/about_sustainability.html">About Sustainability</a></li>
             </ul>
-          </li>
-          <li><a href="../transport/transport_ev_guide.html">Transport ▾</a></li>
-          <li><a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a></li>
-          <li><a href="../general/news.html">News</a></li>
-          <li><a href="../general/about_sustainability.html">About Sustainability</a></li>
-        </ul>
-      </nav>
+        </nav>
     </header>
 
     <main>
-      <h2>The Easy Upgrade</h2>
-      <p>
-        Installing low-flow fixtures is one of the most effective ways to save water at home. 
-        Modern aerators reduce water usage by 30-50% without sacrificing pressure by mixing air into the stream.
-      </p>
-      <figure style="margin: 2rem 0; text-align: center">
-        <img
-          src="../../images/water_fixtures.jpg"
-          alt="Modern faucet with aerated water flow"
-          style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
-        />
-        <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
-          Aerators reduce water usage by up to 50% without losing pressure.
-        </figcaption>
-      </figure>
+        <h2>The Easy Upgrade</h2>
+        <p>
+            Installing low-flow fixtures is one of the most effective ways to save water at home. Modern aerators reduce water usage by 30-50% without sacrificing pressure by mixing air into the stream.
+        </p>
+        <figure style="margin: 2rem 0; text-align: center">
+            <img src="../../images/water_fixtures.jpg" alt="Modern faucet with aerated water flow" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+            <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
+                Aerators reduce water usage by up to 50% without losing pressure.
+            </figcaption>
+        </figure>
 
-      <h3>Top Upgrades for Your Home</h3>
-      <ul>
-          <li><strong>Dual-Flush Toilets:</strong> Allow you to choose a small flush (3L) for liquids and a larger flush (6L) for solids, saving thousands of liters a year.</li>
-          <li><strong>Low-Flow Showerheads:</strong> Standard heads use 15+ liters per minute. Efficient ones use less than 8 liters.</li>
-          <li><strong>Tap Aerators:</strong> A cheap attachment that screws onto your faucet to reduce flow while maintaining pressure.</li>
-      </ul>
+        <h3>Top Upgrades for Your Home</h3>
+        <ul>
+            <li><strong>Dual-Flush Toilets:</strong> Allow you to choose a small flush (3L) for liquids and a larger flush (6L) for solids, saving thousands of liters a year.</li>
+            <li><strong>Low-Flow Showerheads:</strong> Standard heads use 15+ liters per minute. Efficient ones use less than 8 liters.</li>
+            <li><strong>Tap Aerators:</strong> A cheap attachment that screws onto your faucet to reduce flow while maintaining pressure.</li>
+        </ul>
 
-      <section
-        id="water-calc"
-        style="
+        <section id="water-calc" style="
           background: #ebf5fb;
           padding: 2rem;
           border-radius: 12px;
           margin: 2rem 0;
           border: 1px solid #3498db;
-        "
-      >
-        <h3>🚿 Shower Water Usage</h3>
-        <p>See the difference a low-flow fixture makes.</p>
+        ">
+            <h3>🚿 Shower Water Usage</h3>
+            <p>See the difference a low-flow fixture makes.</p>
 
-        <label>Minutes in shower:</label>
-        <input
-          type="number"
-          id="minutes"
-          value="10"
-          style="padding: 5px; width: 60px; margin-bottom: 10px"
-        />
-        <br />
-        <button
-          onclick="calcWater()"
-          class="cta-button"
-          style="margin-top: 0; background-color: #3498db; cursor: pointer"
-        >
-          Compare
-        </button>
+            <label>Minutes in shower:</label>
+            <input type="number" id="minutes" value="10" style="padding: 5px; width: 60px; margin-bottom: 10px" />
+            <br />
+            <button onclick="calcWater()" class="cta-button" style="margin-top: 0; background-color: #3498db; cursor: pointer">
+        Compare
+      </button>
 
-        <div
-          id="waterResult"
-          style="margin-top: 1rem; font-weight: bold; color: #2980b9"
-        ></div>
-      </section>
+            <div id="waterResult" style="margin-top: 1rem; font-weight: bold; color: #2980b9"></div>
+        </section>
 
-      <h3>Look for the Label</h3>
-      <p>
-        When shopping, look for the <strong>WaterSense</strong> label. This certification ensures the product 
-        is 20% more efficient than average products while performing just as well.
-      </p>
+        <h3>Look for the Label</h3>
+        <p>
+            When shopping, look for the <strong>WaterSense</strong> label. This certification ensures the product is 20% more efficient than average products while performing just as well.
+        </p>
     </main>
 
     <script>
-      function calcWater() {
-        var mins = document.getElementById("minutes").value;
-        // Old head: 15 Liters/min. Low-flow: 8 Liters/min.
-        var oldUse = mins * 15;
-        var newUse = mins * 8;
-        var saved = oldUse - newUse;
+        function calcWater() {
+            var mins = document.getElementById("minutes").value;
+            // Old head: 15 Liters/min. Low-flow: 8 Liters/min.
+            var oldUse = mins * 15;
+            var newUse = mins * 8;
+            var saved = oldUse - newUse;
 
-        document.getElementById("waterResult").innerHTML =
-          "Standard Head: " +
-          oldUse +
-          " Liters<br>" +
-          "Low-Flow Head: " +
-          newUse +
-          " Liters<br>" +
-          "💧 You would save <strong>" +
-          saved +
-          " Liters</strong> per shower!";
-      }
+            document.getElementById("waterResult").innerHTML =
+                "Standard Head: " +
+                oldUse +
+                " Liters<br>" +
+                "Low-Flow Head: " +
+                newUse +
+                " Liters<br>" +
+                "💧 You would save <strong>" +
+                saved +
+                " Liters</strong> per shower!";
+        }
     </script>
 
     <footer>
-            <p>&copy; 2026 The EcoCoders Team.</p>
-            <p>
-                <a href="../../students/chatziefraimidou/chatziefraimidou.html">Marina Chatziefraimidou Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/varzakakou/varzakakou.html">Mary Varzakakou Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/chatzimichail/chatzimichail.html">Konstantinos Chatzimichail Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/terpos/terpos.html">Dimitris Terpos Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/charari/charari.html">Georgia Charari Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-        </footer>
+        <p>&copy; 2026 The EcoCoders Team.</p>
+        <p>
+            <a href="../../students/chatziefraimidou/chatziefraimidou.html">Marina Chatziefraimidou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/varzakakou/varzakakou.html">Mary Varzakakou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/chatzimichail/chatzimichail.html">Konstantinos Chatzimichail Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/terpos/terpos.html">Dimitris Terpos Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/charari/charari.html">Georgia Charari Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+    </footer>
 
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆️</button>
     <script src="../../js/main.js"></script>
     <script>
         // Fallback script
         var mybutton = document.getElementById("scrollTopBtn");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -157,10 +141,12 @@
                 mybutton.style.display = "none";
             }
         }
+
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
     </script>
-  </body>
+</body>
+
 </html>

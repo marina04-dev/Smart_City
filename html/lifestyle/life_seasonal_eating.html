@@ -1,129 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seasonal Eating - SmartCity</title>
     <link rel="stylesheet" href="../../css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="logo">
-        <h1>Eating with the Seasons</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../energy/energy_solar.html">Energy ▾</a></li>
-          <li><a href="../waste/waste_recycling_rules.html">Waste ▾</a></li>
-          <li><a href="../water/water_harvesting.html">Water ▾</a></li>
-          <li><a href="../transport/transport_ev_guide.html">Transport ▾</a></li>
-          <li><a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a>
-             <ul>
-                <li><a href="../lifestyle/life_ethical_shopping.html">Ethical Shop</a></li>
-                <li><a href="../lifestyle/life_fast_fashion.html">Fast Fashion</a></li>
-                <li><a href="../lifestyle/life_urban_farming.html">Urban Farm</a></li>
-                <li><a href="../lifestyle/life_seasonal_eating.html">Seasonal Eat</a></li>
-                <li><a href="../lifestyle/life_meat_impact.html">Meat Impact</a></li>
+        <div class="logo">
+            <h1>Eating with the Seasons</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../energy/energy_solar.html">Energy ▾</a></li>
+                <li><a href="../waste/waste_recycling_rules.html">Waste ▾</a></li>
+                <li><a href="../water/water_harvesting.html">Water ▾</a></li>
+                <li><a href="../transport/transport_ev_guide.html">Transport ▾</a></li>
+                <li><a href="../lifestyle/life_ethical_shopping.html">Lifestyle ▾</a>
+                    <ul>
+                        <li><a href="../lifestyle/life_ethical_shopping.html">Ethical Shop</a></li>
+                        <li><a href="../lifestyle/life_fast_fashion.html">Fast Fashion</a></li>
+                        <li><a href="../lifestyle/life_urban_farming.html">Urban Farm</a></li>
+                        <li><a href="../lifestyle/life_seasonal_eating.html">Seasonal Eat</a></li>
+                        <li><a href="../lifestyle/life_meat_impact.html">Meat Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="../general/news.html">News</a></li>
+                <li><a href="../general/about_sustainability.html">About Sustainability</a></li>
             </ul>
-          </li>
-          <li><a href="../general/news.html">News</a></li>
-          <li><a href="../general/about_sustainability.html">About Sustainability</a></li>
-        </ul>
-      </nav>
+        </nav>
     </header>
 
     <main>
-      <h2>Nature's Schedule</h2>
-      <p>
-        Seasonal eating means consuming food that is harvested at the same time of year you buy it. 
-        In our modern world, we can buy strawberries in December, but they likely flew thousands of miles to reach us. 
-        Eating seasonally reconnects us with nature's cycles.
-      </p>
-      <figure style="margin: 2rem 0; text-align: center">
-        <img
-          src="../../images/life_seasonal.jpg"
-          alt="Farmers market stall with fresh vegetables"
-          style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
-        />
-        <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
-          Farmers markets are the best place to find food harvested in season.
-        </figcaption>
-      </figure>
+        <h2>Nature's Schedule</h2>
+        <p>
+            Seasonal eating means consuming food that is harvested at the same time of year you buy it. In our modern world, we can buy strawberries in December, but they likely flew thousands of miles to reach us. Eating seasonally reconnects us with nature's cycles.
+        </p>
+        <figure style="margin: 2rem 0; text-align: center">
+            <img src="../../images/life_seasonal.jpg" alt="Farmers market stall with fresh vegetables" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+            <figcaption style="color: #666; font-style: italic; margin-top: 0.5rem">
+                Farmers markets are the best place to find food harvested in season.
+            </figcaption>
+        </figure>
 
-      <h3>Why It Matters</h3>
-      <ul>
-          <li><strong>Better Taste:</strong> Food ripened on the vine tastes sweeter and richer than food ripened in a truck.</li>
-          <li><strong>Higher Nutrition:</strong> Vitamins degrade over time. Fresh, local produce retains more nutrients.</li>
-          <li><strong>Lower Carbon Footprint:</strong> Avoiding air-freighted food reduces "food miles" significantly.</li>
-      </ul>
-
-      <h3>What to Eat When (Interactive Filter)</h3>
-      <div id="season-filter" style="margin-top: 2rem">
-        <div style="display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap">
-          <button onclick="filterSeason('all')" class="cta-button" style="margin-top:0; background-color: #95a5a6; border:none; cursor: pointer;">Show All</button>
-          <button onclick="filterSeason('spring')" class="cta-button" style="margin-top:0; background-color: #27ae60; border:none; cursor: pointer;">Spring</button>
-          <button onclick="filterSeason('summer')" class="cta-button" style="margin-top:0; background-color: #f39c12; border:none; cursor: pointer;">Summer</button>
-          <button onclick="filterSeason('autumn')" class="cta-button" style="margin-top:0; background-color: #d35400; border:none; cursor: pointer;">Autumn</button>
-          <button onclick="filterSeason('winter')" class="cta-button" style="margin-top:0; background-color: #2980b9; border:none; cursor: pointer;">Winter</button>
-        </div>
-
-        <ul id="foodList" style="list-style: none; padding: 0;">
-          <li class="season spring" style="background: #eafaf1; padding: 10px; margin: 5px 0; border-radius: 5px;">🌸 <strong>Spring:</strong> Asparagus, Spinach, Peas, Strawberries.</li>
-          <li class="season summer" style="background: #fef9e7; padding: 10px; margin: 5px 0; border-radius: 5px;">☀️ <strong>Summer:</strong> Tomatoes, Corn, Berries, Peaches, Zucchini.</li>
-          <li class="season autumn" style="background: #fbeee6; padding: 10px; margin: 5px 0; border-radius: 5px;">🍂 <strong>Autumn:</strong> Pumpkins, Apples, Squash, Grapes, Mushrooms.</li>
-          <li class="season winter" style="background: #ebf5fb; padding: 10px; margin: 5px 0; border-radius: 5px;">❄️ <strong>Winter:</strong> Root vegetables, Citrus (Oranges), Kale, Brussels Sprouts.</li>
+        <h3>Why It Matters</h3>
+        <ul>
+            <li><strong>Better Taste:</strong> Food ripened on the vine tastes sweeter and richer than food ripened in a truck.
+            </li>
+            <li><strong>Higher Nutrition:</strong> Vitamins degrade over time. Fresh, local produce retains more nutrients.
+            </li>
+            <li><strong>Lower Carbon Footprint:</strong> Avoiding air-freighted food reduces "food miles" significantly.</li>
         </ul>
-      </div>
+
+        <h3>What to Eat When (Interactive Filter)</h3>
+        <div id="season-filter" style="margin-top: 2rem">
+            <div style="display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap">
+                <button onclick="filterSeason('all')" class="cta-button" style="margin-top:0; background-color: #95a5a6; border:none; cursor: pointer;">Show All</button>
+                <button onclick="filterSeason('spring')" class="cta-button" style="margin-top:0; background-color: #27ae60; border:none; cursor: pointer;">Spring</button>
+                <button onclick="filterSeason('summer')" class="cta-button" style="margin-top:0; background-color: #f39c12; border:none; cursor: pointer;">Summer</button>
+                <button onclick="filterSeason('autumn')" class="cta-button" style="margin-top:0; background-color: #d35400; border:none; cursor: pointer;">Autumn</button>
+                <button onclick="filterSeason('winter')" class="cta-button" style="margin-top:0; background-color: #2980b9; border:none; cursor: pointer;">Winter</button>
+            </div>
+
+            <ul id="foodList" style="list-style: none; padding: 0;">
+                <li class="season spring" style="background: #eafaf1; padding: 10px; margin: 5px 0; border-radius: 5px;">🌸
+                    <strong>Spring:</strong> Asparagus, Spinach, Peas, Strawberries.</li>
+                <li class="season summer" style="background: #fef9e7; padding: 10px; margin: 5px 0; border-radius: 5px;">☀️
+                    <strong>Summer:</strong> Tomatoes, Corn, Berries, Peaches, Zucchini.</li>
+                <li class="season autumn" style="background: #fbeee6; padding: 10px; margin: 5px 0; border-radius: 5px;">🍂
+                    <strong>Autumn:</strong> Pumpkins, Apples, Squash, Grapes, Mushrooms.</li>
+                <li class="season winter" style="background: #ebf5fb; padding: 10px; margin: 5px 0; border-radius: 5px;">❄️
+                    <strong>Winter:</strong> Root vegetables, Citrus (Oranges), Kale, Brussels Sprouts.</li>
+            </ul>
+        </div>
     </main>
 
     <script>
-      function filterSeason(season) {
-        var items = document.querySelectorAll(".season");
-        items.forEach(function (item) {
-          if (season === "all") {
-            item.style.display = "block";
-          } else {
-            if (item.classList.contains(season)) {
-              item.style.display = "block";
-            } else {
-              item.style.display = "none";
-            }
-          }
-        });
-      }
+        function filterSeason(season) {
+            var items = document.querySelectorAll(".season");
+            items.forEach(function(item) {
+                if (season === "all") {
+                    item.style.display = "block";
+                } else {
+                    if (item.classList.contains(season)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                }
+            });
+        }
     </script>
 
     <footer>
-            <p>&copy; 2026 The EcoCoders Team.</p>
-            <p>
-                <a href="../../students/chatziefraimidou/chatziefraimidou.html">Marina Chatziefraimidou Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/varzakakou/varzakakou.html">Mary Varzakakou Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/chatzimichail/chatzimichail.html">Konstantinos Chatzimichail Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/terpos/terpos.html">Dimitris Terpos Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-            <p>
-                <a href="../../students/charari/charari.html">Georgia Charari Personal Page</a> | 
-                <a href="#">Site Map</a>
-            </p>
-        </footer>
+        <p>&copy; 2026 The EcoCoders Team.</p>
+        <p>
+            <a href="../../students/chatziefraimidou/chatziefraimidou.html">Marina Chatziefraimidou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/varzakakou/varzakakou.html">Mary Varzakakou Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/chatzimichail/chatzimichail.html">Konstantinos Chatzimichail Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/terpos/terpos.html">Dimitris Terpos Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+        <p>
+            <a href="../../students/charari/charari.html">Georgia Charari Personal Page</a> |
+            <a href="#">Site Map</a>
+        </p>
+    </footer>
 
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆️</button>
     <script src="../../js/main.js"></script>
     <script>
         // Fallback script in case main.js is missing
         var mybutton = document.getElementById("scrollTopBtn");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -131,10 +136,12 @@
                 mybutton.style.display = "none";
             }
         }
+
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
     </script>
-  </body>
+</body>
+
 </html>

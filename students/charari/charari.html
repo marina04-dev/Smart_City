@@ -1,74 +1,74 @@
 <!-- charari -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Georgia Charari - Personal Page</title>
     <link rel="stylesheet" href="../../css/style.css" />
 
     <style>
-      .bio-container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .profile-header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
+        .bio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Header section of the page -->
     <header>
-      <div class="logo">
-        <h1>SmartCity Team</h1>
-      </div>
-      <!-- Navigation menu -->
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Back to Site</a></li>
-        </ul>
-      </nav>
+        <div class="logo">
+            <h1>SmartCity Team</h1>
+        </div>
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Back to Site</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main content container -->
     <main class="bio-container">
-      <!-- Personal information -->
-      <div class="profile-header">
-        <h1>Georgia Charari</h1>
-        <p><strong>Student ID:</strong> CSY25104</p>
-        <p><strong>Role: </strong>Developer - Waste Module</p>
-      </div>
+        <!-- Personal information -->
+        <div class="profile-header">
+            <h1>Georgia Charari</h1>
+            <p><strong>Student ID:</strong> CSY25104</p>
+            <p><strong>Role: </strong>Developer - Waste Module</p>
+        </div>
 
-      <hr />
+        <hr />
 
-      <!-- About Me section -->
-      <section id="about-me">
-        <h2>About Me</h2>
-        <p>
-          I am a computer science student interested in sustainability and smart
-          city solutions. Working on the Waste module helped me understand how
-          technology can improve recycling and environmental awareness.
-        </p>
-        <p><strong>Date of Birth:</strong> 15/09/2007</p>
-      </section>
+        <!-- About Me section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                I am a computer science student interested in sustainability and smart city solutions. Working on the Waste module helped me understand how technology can improve recycling and environmental awareness.
+            </p>
+            <p><strong>Date of Birth:</strong> 15/09/2007</p>
+        </section>
 
-      <!-- CS Interests section -->
-      <section id="cs-interests">
-        <h2>Computer Science Interests</h2>
-        <ul>
-          <li>Web Development & Coding</li>
-          <li>Artificial Intelligence</li>
-        </ul>
-      </section>
+        <!-- CS Interests section -->
+        <section id="cs-interests">
+            <h2>Computer Science Interests</h2>
+            <ul>
+                <li>Web Development & Coding</li>
+                <li>Artificial Intelligence</li>
+            </ul>
+        </section>
 
-      <section id="hobbies">
+        <section id="hobbies">
             <h2>Hobbies</h2>
             <p>I love travelling and reading books, as well as spending time with friends and family.</p>
         </section>
@@ -76,40 +76,41 @@
 
     <!-- Footer section -->
     <footer>
-      <p>&copy; 2026 Georgia Charari</p>
-      <p><a href="../../index.html">Return to SmartCity Home</a></p>
+        <p>&copy; 2026 Georgia Charari</p>
+        <p><a href="../../index.html">Return to SmartCity Home</a></p>
     </footer>
 
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
-      ⬆️
-    </button>
+    ⬆️
+  </button>
 
     <script>
-      // Get the button element
-      var mybutton = document.getElementById("scrollTopBtn");
+        // Get the button element
+        var mybutton = document.getElementById("scrollTopBtn");
 
-      // When the user scrolls down 20px from the top, the button appears
-      window.onscroll = function () {
-        scrollFunction();
-      };
+        // When the user scrolls down 20px from the top, the button appears
+        window.onscroll = function() {
+            scrollFunction();
+        };
 
-      // JavaScript function to handle the scroll-to-top behavior
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
+        // JavaScript function to handle the scroll-to-top behavior
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-      }
 
-      // Scroll to the top of the document when clicked
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+        // Scroll to the top of the document when clicked
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
-  </body>
+</body>
+
 </html>

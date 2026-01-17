@@ -1,126 +1,126 @@
 <!-- chatziefraimidou -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marina Chatziefraimidou - Personal Page</title>
     <link rel="stylesheet" href="../../css/style.css" />
 
     <style>
-      /* Internal CSS specific to this page. 
+        /* Internal CSS specific to this page. 
       I used a 'bio-container' class to center the content and add a shadow effect. */
-      .bio-container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .profile-header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
+        
+        .bio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Header section of the page -->
     <header>
-      <div class="logo">
-        <h1>SmartCity Team</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Back to Site</a></li>
-        </ul>
-      </nav>
+        <div class="logo">
+            <h1>SmartCity Team</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Back to Site</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Container -->
     <main class="bio-container">
-      <div class="profile-header">
-        <h1>Marina Chatziefraimidou</h1>
-        <p><strong>Student ID:</strong> CSY25105</p>
-        <p><strong>Role:</strong> Team Leader</p>
-      </div>
+        <div class="profile-header">
+            <h1>Marina Chatziefraimidou</h1>
+            <p><strong>Student ID:</strong> CSY25105</p>
+            <p><strong>Role:</strong> Team Leader</p>
+        </div>
 
-      <hr />
+        <hr />
 
-      <!-- About Section -->
-      <section id="about-me">
-        <h2>About Me</h2>
-        <p>
-          I am an undergraduate student at CITY College, University of York
-          Europe Campus. With a previous background in Biology and specifically
-          in midwifery, I have chosen to pivot my career toward Computer
-          Science. I am a quiet and diligent person who enjoys learning new
-          technologies and working with others to solve problems.
-        </p>
-        <p><strong>Date of Birth:</strong> 26/03/2004</p>
-      </section>
+        <!-- About Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                I am an undergraduate student at CITY College, University of York Europe Campus. With a previous background in Biology and specifically in midwifery, I have chosen to pivot my career toward Computer Science. I am a quiet and diligent person who enjoys
+                learning new technologies and working with others to solve problems.
+            </p>
+            <p><strong>Date of Birth:</strong> 26/03/2004</p>
+        </section>
 
-      <!-- CS Interests Section -->
-      <section id="cs-interests">
-        <h2>Interests in Computer Science</h2>
-        <ul>
-          <li>Web Development & Design</li>
-          <li>Artificial Intelligence</li>
-          <li>Quantum Computing</li>
-          <li>Cybersecurity</li>
-          <li>Data Analysis</li>
-        </ul>
-      </section>
+        <!-- CS Interests Section -->
+        <section id="cs-interests">
+            <h2>Interests in Computer Science</h2>
+            <ul>
+                <li>Web Development & Design</li>
+                <li>Artificial Intelligence</li>
+                <li>Quantum Computing</li>
+                <li>Cybersecurity</li>
+                <li>Data Analysis</li>
+            </ul>
+        </section>
 
-      <!-- Hobbies Section -->
-      <section id="hobbies">
-        <h2>Hobbies</h2>
-        <p>
-          In my free time, I enjoy reading literature. I also enjoy traveling to
-          new places and spending time on personal wellness activities.
-        </p>
-      </section>
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>
+                In my free time, I enjoy reading literature. I also enjoy traveling to new places and spending time on personal wellness activities.
+            </p>
+        </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-      <p>&copy; 2026 Marina Chatziefraimidou</p>
-      <p><a href="../../index.html">Return to SmartCity Home</a></p>
+        <p>&copy; 2026 Marina Chatziefraimidou</p>
+        <p><a href="../../index.html">Return to SmartCity Home</a></p>
     </footer>
 
     <!-- Scroll Top Button -->
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
-      ⬆️
-    </button>
+    ⬆️
+  </button>
 
     <!-- Scroll Top Button Functionality Script -->
     <script>
-      // Get the button element
-      var mybutton = document.getElementById("scrollTopBtn");
+        // Get the button element
+        var mybutton = document.getElementById("scrollTopBtn");
 
-      // When the user scrolls down 20px from the top, the button appears
-      window.onscroll = function () {
-        scrollFunction();
-      };
+        // When the user scrolls down 20px from the top, the button appears
+        window.onscroll = function() {
+            scrollFunction();
+        };
 
-      // JavaScript function to handle the scroll-to-top behavior
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
+        // JavaScript function to handle the scroll-to-top behavior
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-      }
 
-      // Scroll to the top of the document when clicked
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+        // Scroll to the top of the document when clicked
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
-  </body>
+</body>
+
 </html>
