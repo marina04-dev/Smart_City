@@ -123,20 +123,66 @@
         </figure>
 
 
-        <h2> Phantom power calculator </h2>
-        <p> please enter the total number of devices you leave plugged in each year, to calculate their annual cost</p>
+        <section id="phantom-calc" style="
+    background: #f0fdf4; 
+    border: 1px solid #2ecc71; 
+    border-radius: 12px; 
+    padding: 2rem; 
+    margin: 2rem 0; 
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
 
-        <input type="number" id="totalDevices">
-        <button id="calculateButton">Calculate annual cost</button>
-        <p id="result"></p>
+            <h3 style="color: #27ae60; margin-top: 0;">🔌 Phantom Power Calculator</h3>
+            <p style="color: #555; margin-bottom: 1.5rem;">
+                Did you know devices use energy even when turned off? Enter the number of devices you leave plugged in (TVs, chargers, microwaves) to estimate the waste.
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                <input type="number" id="totalDevices" placeholder="e.g. 5" style="
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            width: 100px;
+            font-size: 1rem;">
+
+                <button id="calculateButton" style="
+            background-color: #2ecc71; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            font-weight: bold;
+            transition: background 0.3s;">
+            Calculate Cost
+        </button>
+            </div>
+
+            <p id="result" style="
+        margin-top: 1.5rem; 
+        font-weight: bold; 
+        font-size: 1.2rem; 
+        color: #2c3e50;
+        min-height: 1.5rem;">
+            </p>
+        </section>
 
         <script>
             document.getElementById('calculateButton').addEventListener('click', function() {
                 var totalDevices = document.getElementById('totalDevices').value;
 
+                if (totalDevices === "" || totalDevices < 0) {
+                    document.getElementById('result').innerText = "Please enter a valid number of devices.";
+                    document.getElementById('result').style.color = "red";
+                    return;
+                }
+
                 var totalCost = totalDevices * 30;
 
-                document.getElementById('result').innerText = "By leaving " + totalDevices + " devices plugged in per year, you spend " + totalCost + "€ annually";
+                document.getElementById('result').style.color = "#2c3e50";
+                document.getElementById('result').innerHTML =
+                    "By leaving <span style='color:#27ae60'>" + totalDevices + "</span> devices plugged in, you waste approx. <span style='color:#c0392b'>" + totalCost + "€</span> annually!";
             });
         </script>
 
