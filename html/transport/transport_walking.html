@@ -1,3 +1,4 @@
+<!-- Marina Chatziefraimidou -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,8 +114,8 @@
             <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap">
                 <input type="number" id="kmInput" placeholder="Distance (km)" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex: 1;" />
                 <button onclick="calculateSavings()" class="cta-button" style="margin-top: 0; cursor: pointer">
-          Calculate Savings
-        </button>
+                    Calculate Savings
+                </button>
             </div>
 
             <p id="calcResult" style="margin-top: 1rem; font-weight: bold; color: var(--secondary-color); font-size: 1.2rem;">
@@ -142,7 +143,6 @@
                 return;
             }
 
-            // Avg car emits ~120g CO2 per km
             var co2Saved = (km * 0.12).toFixed(2);
 
             resultText.innerHTML =

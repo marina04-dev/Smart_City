@@ -1,3 +1,4 @@
+<!-- (Konstantinos Chatzimichail)-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,8 +112,8 @@
             <input type="number" id="minutes" value="10" style="padding: 5px; width: 60px; margin-bottom: 10px" />
             <br />
             <button onclick="calcWater()" class="cta-button" style="margin-top: 0; background-color: #3498db; cursor: pointer">
-        Compare
-      </button>
+                Compare
+            </button>
 
             <div id="waterResult" style="margin-top: 1rem; font-weight: bold; color: #2980b9"></div>
         </section>
@@ -126,7 +127,6 @@
     <script>
         function calcWater() {
             var mins = document.getElementById("minutes").value;
-            // Old head: 15 Liters/min. Low-flow: 8 Liters/min.
             var oldUse = mins * 15;
             var newUse = mins * 8;
             var saved = oldUse - newUse;

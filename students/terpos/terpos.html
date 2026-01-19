@@ -1,20 +1,18 @@
+<!-- Dimitris Terpos -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimitrios Terpos - Personal Page</title>
+    <title>Dimitris Terpos - Personal Page</title>
 
     <link rel="stylesheet" href="../../css/style.css">
 
     <style>
-        /* CLASS SELECTOR: Styles the main container with a white background and shadow */
-        
         .bio-container {
             max-width: 800px;
             margin: 0 auto;
-            /* Centers the box horizontally */
             background-color: white;
             padding: 2rem;
             border-radius: 12px;
@@ -43,7 +41,7 @@
     <main class="bio-container">
 
         <div class="profile-header">
-            <h1>Dimitrios Terpos</h1>
+            <h1>Dimitris Terpos</h1>
             <p><strong>Student ID:</strong> CSY25108</p>
             <p><strong>Role:</strong> Developer - Energy Module</p>
         </div>
@@ -71,31 +69,27 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Dimitrios Terpos</p>
+        <p>&copy; 2026 Dimitris Terpos</p>
         <p><a href="../../index.html">Return to SmartCity Home</a></p>
     </footer>
 
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆️</button>
 
     <script>
-        // Select the button by its ID
         var mybutton = document.getElementById("scrollTopBtn");
 
-        // Window.onscroll checks every time the user scrolls
         window.onscroll = function() {
             scrollFunction()
         };
 
         function scrollFunction() {
-            // IF statement to check if user has scrolled down 20px
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block"; // Show button
+                mybutton.style.display = "block";
             } else {
-                mybutton.style.display = "none"; // Hide button
+                mybutton.style.display = "none";
             }
         }
 
-        // Function to scroll back to coordinate 0,0 (top)
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;

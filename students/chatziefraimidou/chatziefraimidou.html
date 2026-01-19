@@ -1,4 +1,4 @@
-<!-- chatziefraimidou -->
+<!-- Marina Chatziefraimidou -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
 
     <style>
         /* Internal CSS specific to this page. 
-      I used a 'bio-container' class to center the content and add a shadow effect. */
+        I used a 'bio-container' class to center the content and add a shadow effect. */
         
         .bio-container {
             max-width: 800px;
@@ -31,11 +31,16 @@
 <body>
     <!-- Header section of the page -->
     <header>
+        <!-- Logo div -->
         <div class="logo">
+            <!-- Title -->
             <h1>SmartCity Team</h1>
         </div>
+        <!-- Navigation Section -->
         <nav>
+            <!-- Unordered List -->
             <ul>
+                <!-- Link back to the homepage -->
                 <li><a href="../../index.html">Back to Site</a></li>
             </ul>
         </nav>
@@ -43,27 +48,37 @@
 
     <!-- Main Container -->
     <main class="bio-container">
+        <!-- Div for Bio Info -->
         <div class="profile-header">
+            <!-- Name in h1 tag -->
             <h1>Marina Chatziefraimidou</h1>
+            <!-- Student ID in p tag -->
             <p><strong>Student ID:</strong> CSY25105</p>
+            <!-- Role in p tag -->
             <p><strong>Role:</strong> Team Leader</p>
         </div>
 
+        <!-- Separation tag -->
         <hr />
 
         <!-- About Section -->
         <section id="about-me">
+            <!-- About Me title in h2 tag -->
             <h2>About Me</h2>
+            <!-- About Me info in p tag -->
             <p>
                 I am an undergraduate student at CITY College, University of York Europe Campus. With a previous background in Biology and specifically in midwifery, I have chosen to pivot my career toward Computer Science. I am a quiet and diligent person who enjoys
                 learning new technologies and working with others to solve problems.
             </p>
+            <!-- Date of Birth in p tag -->
             <p><strong>Date of Birth:</strong> 26/03/2004</p>
         </section>
 
         <!-- CS Interests Section -->
         <section id="cs-interests">
+            <!-- CS Interests title in h2 tag -->
             <h2>Interests in Computer Science</h2>
+            <!-- Unordered list for CS Interests -->
             <ul>
                 <li>Web Development & Design</li>
                 <li>Artificial Intelligence</li>
@@ -75,7 +90,9 @@
 
         <!-- Hobbies Section -->
         <section id="hobbies">
+            <!-- Hobbies title in h2 tag -->
             <h2>Hobbies</h2>
+            <!-- Hobbies info in h2 tag -->
             <p>
                 In my free time, I enjoy reading literature. I also enjoy traveling to new places and spending time on personal wellness activities.
             </p>
@@ -90,8 +107,8 @@
 
     <!-- Scroll Top Button -->
     <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
-    ⬆️
-  </button>
+        ⬆️
+    </button>
 
     <!-- Scroll Top Button Functionality Script -->
     <script>
@@ -105,13 +122,14 @@
 
         // JavaScript function to handle the scroll-to-top behavior
         function scrollFunction() {
+            // IF statement to check if user has scrolled down 20px
             if (
                 document.body.scrollTop > 20 ||
                 document.documentElement.scrollTop > 20
             ) {
-                mybutton.style.display = "block";
+                mybutton.style.display = "block"; // Show button
             } else {
-                mybutton.style.display = "none";
+                mybutton.style.display = "none"; // Hide button
             }
         }
 
